@@ -1,0 +1,16 @@
+{
+  "name": "editable-node-portfolio",
+  "version": "1.0.0",
+  "description": "A responsive portfolio website with a Node.js backend and editable admin panel.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "nodejs",
+    "admin"
+  ],
+  "author": "",
+  "license": "MIT"
+}

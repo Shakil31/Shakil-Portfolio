@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": "abdab927-8b02-4f7d-9132-f14c45f72671",
+      "username": "admin",
+      "displayName": "Shakil",
+      "passwordHash": "pbkdf2$120000$66998d99d3de028d976d9a56de1ed083$0938aa011a6d5fd36426e990aabaedb4a392e76a6cce094ce958c7bd5065752b",
+      "createdAt": "2026-04-18T17:55:24.809Z",
+      "updatedAt": "2026-04-18T17:57:03.018Z"
+    }
+  ]
+}

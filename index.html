@@ -1,85 +1,140 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Creative developer and designer portfolio.">
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+   <link rel="stylesheet" href="assets/css/styles.css">
+   <title>Portfolio</title>
+</head>
+<body>
+   <header class="header" id="header">
+      <nav class="nav container" aria-label="Primary navigation">
+         <a href="#home" class="nav__logo" data-site-name>Portfolio</a>
 
-      <!--=============== FAVICON ===============-->
-      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+         <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <i class="ri-menu-line"></i>
+         </button>
 
-      <!--=============== REMIXICONS ===============-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li><a href="#about" class="nav__link">About</a></li>
+               <li><a href="#projects" class="nav__link">Projects</a></li>
+               <li><a href="#work" class="nav__link">Work</a></li>
+               <li><a href="#services" class="nav__link">Services</a></li>
+               <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+         </div>
+      </nav>
+   </header>
 
-      <!--=============== SWIPER CSS ===============-->
-      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+   <main class="main">
+      <section class="home section" id="home">
+         <div class="home__container container grid">
+            <div class="home__content">
+               <p class="home__greeting" data-hero-greeting>Hello, I'm</p>
+               <h1 class="home__name" data-hero-name>Loading...</h1>
+               <div class="home__profession">
+                  <span data-hero-split>Creative</span>
+                  <strong data-hero-profession></strong>
+               </div>
+               <div class="home__actions">
+                  <a href="#projects" class="button">View Projects</a>
+                  <a href="assets/pdf/Anid-Cv.pdf" class="button button--ghost" data-resume-link>Resume</a>
+               </div>
+               <ul class="home__social" data-social-links></ul>
+            </div>
+            <div class="home__image-wrap">
+               <img src="assets/img/home-perfil.png" alt="Portfolio profile" class="home__image" data-hero-image>
+            </div>
+         </div>
+      </section>
 
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
+      <section class="about section" id="about">
+         <div class="about__container container grid">
+            <div class="about__image-wrap">
+               <img src="assets/img/about-perfil.png" alt="About profile" class="about__image" data-about-image>
+            </div>
+            <div>
+               <h2 class="section__title" data-about-title></h2>
+               <p class="about__description" data-about-description></p>
+               <a href="assets/pdf/Anid-Cv.pdf" class="button" data-about-resume>Resume</a>
+            </div>
+         </div>
+      </section>
 
-      <title>Responsive portfolio website Anid - Bedimcode</title>
-   </head>
-   <body>
-      <!--==================== HEADER ====================-->
-      <header class="header" id="header">
+      <section class="projects section" id="projects">
+         <div class="container">
+            <h2 class="section__title" data-projects-title></h2>
+            <div class="projects__grid" data-projects-list></div>
+         </div>
+      </section>
 
-      </header>
+      <section class="work section" id="work">
+         <div class="container">
+            <h2 class="section__title" data-work-title></h2>
+            <div class="work__tabs" role="tablist" aria-label="Work history tabs">
+               <button class="work__button active" data-tab="experience" type="button">Experience</button>
+               <button class="work__button" data-tab="education" type="button">Education</button>
+            </div>
+            <div class="work__list active" data-work-list="experience"></div>
+            <div class="work__list" data-work-list="education"></div>
+         </div>
+      </section>
 
-      <!--==================== MAIN ====================-->
-      <main class="main">
-         <!-- CUSTOM CURSOR -->
-         
-         <!--==================== HOME ====================-->
-         <section class="home section">
-            
-            
-         </section>
+      <section class="services section" id="services">
+         <div class="container">
+            <h2 class="section__title" data-services-title></h2>
+            <div class="services__grid" data-services-list></div>
+         </div>
+      </section>
 
-         <!--==================== ABOUT ====================-->
-         <section class="about section" id="about">
-            
-         </section>
+      <section class="testimonials section" id="testimonials">
+         <div class="container">
+            <h2 class="section__title" data-testimonials-title></h2>
+            <div class="testimonials__grid" data-testimonials-list></div>
+         </div>
+      </section>
 
-         <!--==================== PROJECTS ====================-->
-         <section class="projects section" id="projects">
-            
-         </section>
+      <section class="contact section" id="contact">
+         <div class="contact__container container grid">
+            <div>
+               <h2 class="section__title" data-contact-title></h2>
+               <p class="contact__description" data-contact-description></p>
+               <button class="button" id="copy-email" type="button">Copy email</button>
+               <p class="contact__copied" id="copy-message" aria-live="polite"></p>
+            </div>
+            <div class="contact__details">
+               <article>
+                  <h3>Email</h3>
+                  <a href="#" data-contact-email></a>
+               </article>
+               <article>
+                  <h3>Location</h3>
+                  <p data-contact-location></p>
+               </article>
+               <article>
+                  <h3>Social Media</h3>
+                  <div class="contact__links" data-contact-social></div>
+               </article>
+               <article>
+                  <h3>Write Me & We'll Talk</h3>
+                  <div class="contact__links" data-contact-messaging></div>
+               </article>
+            </div>
+         </div>
+      </section>
+   </main>
 
-         <!--==================== WORK ====================-->
-         <section class="work section">
+   <footer class="footer">
+      <div class="container footer__container">
+         <p><span data-footer-year></span> <span data-footer-copy></span></p>
+         <a href="/admin.html" class="footer__admin">Admin</a>
+      </div>
+   </footer>
 
-         </section>
-
-         <!--==================== SERVICES ====================-->
-         <section class="services section">
-
-         </section>
-
-         <!--==================== TESTIMONIALS ====================-->
-         <section class="testimonials section">
-
-         </section>
-
-         <!--==================== CONTACT ====================-->
-         <section class="contact section" id="contact">
-            
-         </section>
-      </main>
-
-      <!--==================== FOOTER ====================-->
-      <footer class="footer grid">
-         
-      </footer>
-      
-      <!--=============== SCROLLREVEAL ===============-->
-      <script src="assets/js/scrollreveal.min.js"></script>
-
-      <!--=============== ANIME JS ===============-->
-      <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
-
-      <!--=============== SWIPER JS ===============-->
-      <script src="assets/js/swiper-bundle.min.js"></script>
-
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
-   </body>
+   <script src="assets/js/main.js"></script>
+</body>
 </html>
