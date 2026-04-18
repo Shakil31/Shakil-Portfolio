@@ -1,5 +1,5 @@
 {
-  "siteName": "Shakil Barua | Building Scalable Systems",
+  "siteName": "Shakil Barua | Backend Engineer",
   "resumeUrl": "assets/pdf/Shakil_Barua_CV_IT.pdf",
   "hero": {
     "greeting": "Hello, I'm",
@@ -78,7 +78,41 @@
       "title": "B.Sc in Computer Science <br> & Engineering",
       "place": "American International University - Bangladesh (AIUB)",
       "year": "2019 – 2023",
-      "description": "<B\nCompleted a Bachelor’s degree in Computer Science and Engineering with a strong focus on software development, backend systems, and database management.\n\nGained hands-on experience in web development, REST API design, and system architecture. Completed a thesis on blockchain-based healthcare systems, focusing on secure and scalable data management."
+      "description": "Completed a Bachelor's degree in Computer Science and Engineering with a strong focus on software development, backend systems, and database management.\n\nGained hands-on experience in web development, REST API design, and system architecture. Completed a thesis on blockchain-based healthcare systems, focusing on secure and scalable data management."
+    }
+  ],
+  "skillsTitle": "Technical <span>Skills</span>",
+  "skills": [
+    {
+      "category": "Backend",
+      "items": "Python, Django, Django REST Framework, MySQL, PostgreSQL, Redis, API Development"
+    },
+    {
+      "category": "Frontend",
+      "items": "React.js, JavaScript, HTML5, CSS3, Vite, Context API, Axios"
+    },
+    {
+      "category": "Tools & Platforms",
+      "items": "Git, Postman, Linux, Docker, Vercel, GitHub"
+    },
+    {
+      "category": "Databases",
+      "items": "PostgreSQL, MySQL, Database Design, Query Optimization"
+    }
+  ],
+  "certificationsTitle": "Certifications & <span>Achievements</span>",
+  "certifications": [
+    {
+      "title": "Full Stack Web Development",
+      "issuer": "American International University - Bangladesh",
+      "year": "2023",
+      "description": "Comprehensive training in modern web development with Django and React.js"
+    },
+    {
+      "title": "REST API Development",
+      "issuer": "Professional Development",
+      "year": "2024",
+      "description": "Mastered designing and implementing scalable RESTful APIs"
     }
   ],
   "servicesTitle": "What I <span>Offer</span>",
