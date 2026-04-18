@@ -217,17 +217,33 @@ async function init() {
   bindStaticInteractions();
 
   try {
-    const response = await fetch("/api/portfolio");
-    if (!response.ok) throw new Error("Portfolio data failed to load.");
-    const data = await response.json();
+    const data = await loadPortfolioData();
     renderPortfolio(data);
   } catch (error) {
     console.error(error);
     document.body.insertAdjacentHTML(
       "afterbegin",
-      '<p class="load-error">Could not load portfolio data. Start the Node server with <code>npm start</code>.</p>'
+      '<p class="load-error">Could not load portfolio data. Please refresh the page.</p>'
     );
   }
+}
+
+async function loadPortfolioData() {
+  const sources = ["/api/portfolio", "/assets/data/portfolio.json"];
+
+  for (const source of sources) {
+    try {
+      const response = await fetch(source, { cache: "no-store" });
+      if (!response.ok) continue;
+
+      const data = await response.json();
+      if (data?.hero && data?.projects && data?.contact) return data;
+    } catch (error) {
+      console.warn(`Portfolio data source failed: ${source}`, error);
+    }
+  }
+
+  throw new Error("Portfolio data failed to load.");
 }
 
 init();

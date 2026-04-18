@@ -1,0 +1,149 @@
+{
+  "siteName": "Shakil Barua | Building Scalable Systems",
+  "resumeUrl": "assets/pdf/Shakil_Barua_CV_IT.pdf",
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Shakil <br> Barua",
+    "split": "Creative",
+    "profession": "Software Engineer <br> & Creative Developer",
+    "resumeLabel": "Resume",
+    "image": "assets/img/about-perfil.png"
+  },
+  "about": {
+    "title": "<span>Creativity</span><br>Is My Passion",
+    "description": "I'm a passionate web developer and designer with a strong foundation in modern web technologies and software engineering. I specialize in building scalable, efficient, and user-friendly applications that solve real-world problems.\n\nWith experience in both frontend and backend development, I enjoy transforming ideas into fully functional digital products. My technical expertise includes working with frameworks like Laravel, Django, and React, along with database management and API development.\n\nI am driven by curiosity and continuous learning, always exploring new technologies, tools, and design trends to improve my skills. Beyond coding, I have a creative mindset that helps me craft visually appealing and engaging user experiences.\n\nCurrently, I am seeking opportunities where I can contribute, grow, and make a meaningful impact as a developer while continuously enhancing my technical and problem-solving abilities.",
+    "buttonLabel": "Download CV",
+    "image": "assets/img/about-perfil.png"
+  },
+  "projectsTitle": "I Make Incredible <br><span>Projects</span>",
+  "projects": [
+    {
+      "category": "Research / Full Stack",
+      "title": "Smart Healthcare <br> Data System",
+      "subtitle": "Secure & Scalable Medical Platform",
+      "description": "HTML, CSS, JavaScript, Django, REST API, PostgreSQL, Blockchain Concept.",
+      "image": "assets/img/projects-1.png",
+      "url": "https://github.com/Shakil31/SmartHealthCare_system"
+    },
+    {
+      "category": "Full Stack Development",
+      "title": "PetLouma <br> E-commerce Platform",
+      "subtitle": "Scalable Full-Stack Online Pet Store",
+      "description": "Django REST Framework, React.js (Vite), PostgreSQL, JWT Authentication, Context API, Axios, CSS (Glassmorphism UI)",
+      "image": "assets/img/projects-2.png",
+      "url": "https://github.com/Shakil31/Petlouma_Ecommerce_site#petlouma-e-commerce-platform-"
+    },
+    {
+      "category": "Full Stack Development",
+      "title": "Learning Management <br> System (LMS)",
+      "subtitle": "Secure Authentication & Scalable Learning Platform",
+      "description": "Django, React.js, TypeScript, JWT Authentication, Context API, REST API, PostgreSQL",
+      "image": "assets/img/projects-3.png",
+      "url": "https://github.com/Shakil31/Learning-Site"
+    },
+    {
+      "category": "Full Stack / Real-Time Systems",
+      "title": "Real-Time Chat <br> Application",
+      "subtitle": "WebSocket-Based Messaging Platform",
+      "description": "Django, Django REST Framework, Django Channels, Redis, React.js (Vite), WebSockets, JWT Authentication, Context API, PostgreSQL",
+      "image": "assets/img/projects-4.png",
+      "url": "https://github.com/Shakil31/Realtime_chat"
+    },
+    {
+      "category": "Full Stack Development",
+      "title": "Billing & Invoice <br> Management System",
+      "subtitle": "Automated Transaction & Invoice Processing",
+      "description": "Django / Laravel, PostgreSQL/MySQL, REST API, JavaScript, HTML, CSS",
+      "image": "assets/img/projects-5.png",
+      "url": "https://github.com/Shakil31/Billing-System-Task"
+    }
+  ],
+  "workTitle": "<span>My Work</span><br>Experience",
+  "experience": [
+    {
+      "title": "Backend Developer",
+      "place": "Raktch Technology & Software, Dhaka",
+      "year": "Nov 2025 – Present",
+      "description": "Developing scalable backend systems using Python and Django, focusing on performance, security, and clean architecture.\n\nDesigned and implemented RESTful APIs using Django REST Framework to support frontend applications. Optimized database queries and improved system performance through caching and efficient data handling.\n\nWorked on real-world applications, ensuring reliability, maintainability, and scalability of backend services."
+    },
+    {
+      "title": "Web Developer Intern",
+      "place": "Unico IT LTD, Dhaka",
+      "year": "Apr 2023 – Sep 2023",
+      "description": "Worked as a web developer intern, contributing to the development of web applications using Laravel.\n\nCollaborated with frontend developers to build responsive and user-friendly interfaces. Developed backend features and improved application performance through efficient coding practices."
+    }
+  ],
+  "education": [
+    {
+      "title": "B.Sc in Computer Science <br> & Engineering",
+      "place": "American International University - Bangladesh (AIUB)",
+      "year": "2019 – 2023",
+      "description": "<B\nCompleted a Bachelor’s degree in Computer Science and Engineering with a strong focus on software development, backend systems, and database management.\n\nGained hands-on experience in web development, REST API design, and system architecture. Completed a thesis on blockchain-based healthcare systems, focusing on secure and scalable data management."
+    }
+  ],
+  "servicesTitle": "What I <span>Offer</span>",
+  "services": [
+    {
+      "title": "Backend Development",
+      "description": "I build robust and scalable backend systems using Django and Django REST Framework. I specialize in designing clean architectures, developing secure REST APIs, and optimizing performance for real-world applications.\n\nWith hands-on industry experience, I focus on writing efficient code, improving database performance, and ensuring system reliability.",
+      "subtitle": "Scalable APIs & System Architecture",
+      "skills": "Python, Django, Django REST Framework, REST API, JWT Authentication, MySQL, PostgreSQL, Caching, Git, Postman"
+    },
+    {
+      "title": "Full Stack Web Development",
+      "description": "I develop complete web applications by integrating backend systems with modern frontend technologies. I build responsive, user-friendly interfaces and connect them with powerful APIs to deliver seamless user experiences.\n\nMy focus is on creating scalable, maintainable, and performance-driven applications.",
+      "subtitle": "End-to-End Application Development",
+      "skills": "Django, React.js, JavaScript, HTML, CSS, API Integration, Axios."
+    }
+  ],
+  "testimonialsTitle": "<span>What They Say</span><br>About Me",
+  "testimonials": [
+    {
+      "name": "Rakibul Islam",
+      "rating": "5.0",
+      "quote": "Shakil Barua has demonstrated strong technical expertise and professionalism as a Backend Developer at Raktch Technology & Software. \n\nDuring his time with us, he contributed significantly to ERP, POS, CRM, and MIS systems, consistently delivering scalable and efficient backend solutions. His dedication, problem-solving ability, and commitment to quality make him a valuable asset to any development team.",
+      "image": "assets/img/testimonial-1.png"
+    },
+    {
+      "name": "Managing Director",
+      "rating": "5.0",
+      "quote": "Shakil Barua worked as a Laravel Developer Intern at UNICO IT LIMITED, where he demonstrated strong learning ability, dedication, and teamwork.\n\nHe actively contributed to web development tasks, collaborated with senior developers, and showed consistent improvement in both technical skills and problem-solving. His motivation to learn and adapt makes him a promising software developer.",
+      "image": "assets/img/testimonial-1.png"
+    }
+  ],
+  "contact": {
+    "title": "Contact Me",
+    "description": "Tell me about your next project.",
+    "copyButtonLabel": "Copy email",
+    "email": "shakilbarua.aiub@email.com",
+    "location": "Dhaka, Bangladesh"
+  },
+  "socials": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/shakil-barua-520568257"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/Shakil31"
+    }
+  ],
+  "messaging": [
+    {
+      "label": "WhatsApp",
+      "url": "https://api.whatsapp.com/send?phone=51123456789&text=Hello, more information!"
+    },
+    {
+      "label": "Telegram",
+      "url": "https://t.me/telegram"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/"
+    }
+  ],
+  "footer": {
+    "year": "© 2026",
+    "copy": "All Rights Reserved By <span>Shakil</span>"
+  }
+}
