@@ -36,3 +36,31 @@ The admin portal uses a session cookie after login. If you are logged out, `/adm
 The optional `ADMIN_TOKEN` environment variable is still supported for direct API saves, but the browser admin now uses profile login.
 
 The current browser admin page is best for local editing or a private deployment. Use HTTPS and stronger deployment-level protections before exposing it publicly.
+
+## Deploy to Vercel
+
+This project includes Vercel serverless API routes in `api/` and shared backend helpers in `lib/`.
+
+For admin edits to persist after deployment, create/connect a Vercel Blob store and add these environment variables in Vercel:
+
+- `BLOB_READ_WRITE_TOKEN`
+- `SESSION_SECRET`
+
+Then deploy:
+
+```bash
+npx vercel
+```
+
+For production:
+
+```bash
+npx vercel --prod
+```
+
+The first deployed login is:
+
+- Username: `admin`
+- Password: `admin12345`
+
+Change it from the admin Profile section after the first login.
