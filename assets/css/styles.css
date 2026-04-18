@@ -144,12 +144,17 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .nav__logo {
   color: var(--title-color);
   font-family: var(--second-font);
   font-weight: 700;
+  max-width: calc(100% - 3.25rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .nav__toggle {
@@ -163,27 +168,37 @@ img {
 
 .nav__menu {
   position: fixed;
-  inset-inline: 1rem;
-  top: -100%;
-  padding: 1rem;
+  top: calc(var(--header-height) + .75rem);
+  right: 1rem;
+  width: min(15rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - var(--header-height) - 2rem);
+  padding: .55rem;
   border: 1px solid var(--line-color);
   border-radius: 8px;
-  background-color: hsl(230, 16%, 10%);
-  transition: top .25s;
+  background-color: hsla(230, 16%, 10%, .96);
+  box-shadow: 0 1.25rem 3rem hsla(230, 24%, 3%, .45);
+  backdrop-filter: blur(18px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-.65rem);
+  transition: opacity .2s, transform .2s;
+  overflow-y: auto;
 }
 
 .show-menu {
-  top: 4.75rem;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .nav__list {
   display: grid;
-  gap: .75rem;
+  gap: .2rem;
 }
 
 .nav__link {
   display: block;
-  padding: .8rem 1rem;
+  padding: .75rem .85rem;
   border-radius: 8px;
   color: var(--title-color);
   font-weight: var(--font-medium);
@@ -195,7 +210,7 @@ img {
 }
 
 .home {
-  padding-top: 7rem;
+  padding-top: 6rem;
 }
 
 .home__container,
@@ -293,6 +308,31 @@ img {
   width: 100%;
   max-height: 560px;
   object-fit: cover;
+}
+
+@media screen and (max-width: 420px) {
+  :root {
+    --biggest-font-size: 2rem;
+    --h2-font-size: 1.08rem;
+  }
+
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .home__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .button {
+    padding-inline: .7rem;
+  }
+
+  .home__image,
+  .about__image {
+    max-height: 440px;
+  }
 }
 
 .about__description {
@@ -565,9 +605,17 @@ img {
 
   .nav__menu {
     position: static;
+    width: auto;
+    max-height: none;
     padding: 0;
     border: 0;
     background-color: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    overflow: visible;
   }
 
   .nav__list {

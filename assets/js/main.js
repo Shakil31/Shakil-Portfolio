@@ -176,6 +176,10 @@ function bindDynamicInteractions() {
 function bindStaticInteractions() {
   const navToggle = $("#nav-toggle");
   const navMenu = $("#nav-menu");
+  const closeMenu = () => {
+    navMenu.classList.remove("show-menu");
+    navToggle.setAttribute("aria-expanded", "false");
+  };
 
   navToggle.addEventListener("click", () => {
     const open = navMenu.classList.toggle("show-menu");
@@ -184,9 +188,18 @@ function bindStaticInteractions() {
 
   $$(".nav__link").forEach((link) => {
     link.addEventListener("click", () => {
-      navMenu.classList.remove("show-menu");
-      navToggle.setAttribute("aria-expanded", "false");
+      closeMenu();
     });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!navMenu.classList.contains("show-menu")) return;
+    if (navMenu.contains(event.target) || navToggle.contains(event.target)) return;
+    closeMenu();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
   });
 
   $$(".work__button").forEach((button) => {
