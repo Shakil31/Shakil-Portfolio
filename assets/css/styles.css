@@ -493,6 +493,84 @@ img {
   margin-block: 1rem .35rem;
 }
 
+/* ============ SKILLS ============ */
+.skills__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border: 1px solid var(--line-color);
+  border-radius: 8px;
+  transition: all .3s ease;
+}
+
+.skill-card:hover {
+  border-color: var(--first-color);
+  background-color: hsla(164, 74%, 48%, .08);
+}
+
+.skill-card h3 {
+  color: var(--first-color);
+  margin-bottom: .75rem;
+  font-size: var(--h3-font-size);
+}
+
+.skill-card p {
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: var(--small-font-size);
+}
+
+/* ============ CERTIFICATIONS ============ */
+.certifications__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.certification-card {
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border: 1px solid var(--line-color);
+  border-radius: 8px;
+  border-left: 4px solid var(--first-color);
+  transition: all .3s ease;
+}
+
+.certification-card:hover {
+  border-color: var(--first-color);
+  background-color: hsla(164, 74%, 48%, .08);
+  transform: translateY(-4px);
+}
+
+.certification-card h3 {
+  color: var(--title-color);
+  margin-bottom: .5rem;
+  font-size: var(--h3-font-size);
+}
+
+.cert-issuer {
+  color: var(--first-color);
+  font-weight: 600;
+  font-size: var(--small-font-size);
+  margin-bottom: .25rem;
+}
+
+.cert-year {
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  margin-bottom: .75rem;
+}
+
+.cert-description {
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: var(--small-font-size);
+}
+
+/* ============ TESTIMONIALS ============ */
 .testimonial-card {
   display: grid;
   gap: .9rem;
@@ -577,6 +655,8 @@ img {
 @media screen and (min-width: 640px) {
   .projects__grid,
   .services__grid,
+  .skills__grid,
+  .certifications__grid,
   .testimonials__grid,
   .work__list.active,
   .contact__details {

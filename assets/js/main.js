@@ -97,6 +97,32 @@ function renderPortfolio(data) {
   renderWork("experience", data.experience);
   renderWork("education", data.education);
 
+  setHTML("[data-skills-title]", data.skillsTitle);
+  const skillsList = $("[data-skills-list]");
+  skillsList.innerHTML = data.skills
+    .map(
+      (skill) => `
+        <article class="skill-card">
+          <h3>${skill.category}</h3>
+          <p>${skill.items}</p>
+        </article>`
+    )
+    .join("");
+
+  setHTML("[data-certifications-title]", data.certificationsTitle);
+  const certificationsList = $("[data-certifications-list]");
+  certificationsList.innerHTML = data.certifications
+    .map(
+      (cert) => `
+        <article class="certification-card">
+          <h3>${cert.title}</h3>
+          <p class="cert-issuer">${cert.issuer}</p>
+          <p class="cert-year">${cert.year}</p>
+          <p class="cert-description">${cert.description}</p>
+        </article>`
+    )
+    .join("");
+
   setHTML("[data-services-title]", data.servicesTitle);
   const servicesList = $("[data-services-list]");
   servicesList.innerHTML = data.services
