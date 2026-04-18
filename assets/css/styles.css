@@ -363,12 +363,24 @@ img {
 
 .project-card {
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: var(--first-color);
+  box-shadow: 0 8px 24px rgba(164, 220, 200, 0.15);
+  transform: translateY(-6px);
 }
 
 .project-card__image {
   width: 100%;
   aspect-ratio: 16 / 11;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-card__image {
+  transform: scale(1.08);
 }
 
 .project-card__body,
