@@ -164,6 +164,12 @@ img {
   background-color: var(--container-color);
   color: var(--title-color);
   font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.nav__toggle:hover {
+  background-color: hsla(164, 74%, 48%, .15);
+  color: var(--first-color);
 }
 
 .nav__menu {
@@ -260,16 +266,27 @@ img {
   background-color: var(--first-color);
   color: hsl(230, 18%, 7%);
   font-weight: 700;
+  transition: all 0.3s ease;
 }
 
 .button:hover {
   background-color: hsl(164, 74%, 56%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(164, 220, 200, 0.2);
 }
 
 .button--ghost {
   border: 1px solid var(--line-color);
   background-color: transparent;
   color: var(--title-color);
+  transition: all 0.3s ease;
+}
+
+.button--ghost:hover {
+  border-color: var(--first-color);
+  background-color: hsla(164, 74%, 48%, .08);
+  color: var(--first-color);
+  transform: translateY(-3px);
 }
 
 .home__social {
@@ -438,11 +455,21 @@ img {
   background-color: var(--container-color);
   color: var(--title-color);
   font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.work__button:hover {
+  background-color: hsla(164, 74%, 48%, .2);
+  color: var(--first-color);
 }
 
 .work__button.active {
   background-color: var(--first-color);
   color: hsl(230, 18%, 7%);
+}
+
+.work__button.active:hover {
+  background-color: hsl(164, 74%, 56%);
 }
 
 .work__list {
