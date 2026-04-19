@@ -1693,6 +1693,7 @@ img {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
   max-width: none;
+  gap: 1.15rem;
 }
 
 .stat-item {
@@ -1702,10 +1703,12 @@ img {
   padding: 1rem;
   border: 1px solid var(--line-color);
   background-color: hsla(230, 16%, 12%, .72);
+  overflow: hidden;
 }
 
 .stat-content {
   min-width: 0;
+  overflow: hidden;
 }
 
 .stat-number {
@@ -1715,7 +1718,9 @@ img {
 
 .stat-label {
   max-width: none;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
 }
 
 .projects__grid {
