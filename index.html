@@ -32,37 +32,86 @@
 
    <main class="main">
       <section class="home section" id="home">
-         <div class="home__container container grid">
-            <div class="home__content">
-               <p class="home__greeting" data-hero-greeting>Hello, I'm</p>
-               <h1 class="home__name" data-hero-name>Loading...</h1>
-               <div class="home__profession">
-                  <span data-hero-split>Creative</span>
-                  <strong data-hero-profession></strong>
+         <div class="home__container container">
+            <div class="home__wrapper">
+               <!-- Left Content -->
+               <div class="home__content">
+                  <!-- Subtitle -->
+                  <p class="home__subtitle" data-hero-greeting>I BUILD SCALABLE SYSTEMS</p>
+                  
+                  <!-- Main Headline (animated word-by-word) -->
+                  <h1 class="home__headline" data-hero-headline>
+                     <span class="headline-word">Shakil</span>
+                     <span class="headline-word">Barua</span>
+                  </h1>
+                  
+                  <!-- Description -->
+                  <p class="home__description" data-hero-profession>
+                     Specialized in building scalable APIs, real-time systems, and robust backend architectures that power modern applications.
+                  </p>
+                  
+                  <!-- CTA Buttons -->
+                  <div class="home__actions">
+                     <a href="#contact" class="button button--primary">Get In Touch</a>
+                     <a href="assets/pdf/Anid-Cv.pdf" class="button button--secondary" data-resume-link>Download CV</a>
+                  </div>
+                  
+                  <!-- Social Links -->
+                  <ul class="home__social" data-social-links></ul>
                </div>
-               <div class="home__actions">
-                  <a href="#projects" class="button">View Projects</a>
-                  <a href="assets/pdf/Anid-Cv.pdf" class="button button--ghost" data-resume-link>Resume</a>
+               
+               <!-- Right: Profile Image -->
+               <div class="home__image-wrap profile-card">
+                  <!-- Background blob shape -->
+                  <div class="profile-card__bg-blob"></div>
+                  
+                  <!-- Profile image -->
+                  <div class="profile-card__image-container">
+                     <img src="assets/img/home-perfil.png" alt="Portfolio profile" class="home__image" data-hero-image>
+                  </div>
+                  
+                  <!-- Floating badge -->
+                  <div class="profile-card__badge">
+                     <span>1+ Year</span>
+                     <span>Experience</span>
+                  </div>
+                  
+                  <!-- Decorative element -->
+                  <div class="profile-card__accent"></div>
                </div>
-               <ul class="home__social" data-social-links></ul>
             </div>
-            <div class="home__image-wrap profile-card">
-               <!-- Background blob shape -->
-               <div class="profile-card__bg-blob"></div>
-               
-               <!-- Profile image -->
-               <div class="profile-card__image-container">
-                  <img src="assets/img/home-perfil.png" alt="Portfolio profile" class="home__image" data-hero-image>
+            
+            <!-- Stats Section -->
+            <div class="home__stats">
+               <div class="stat-item">
+                  <div class="stat-icon">
+                     <i class="ri-code-s-slash-line"></i>
+                  </div>
+                  <div class="stat-content">
+                     <h3 class="stat-number">50+</h3>
+                     <p class="stat-label">Projects Completed</p>
+                  </div>
                </div>
                
-               <!-- Floating badge -->
-               <div class="profile-card__badge">
-                  <span>1+ Year</span>
-                  <span>Experience</span>
+               <div class="stat-item">
+                  <div class="stat-icon">
+                     <i class="ri-trophy-line"></i>
+                  </div>
+                  <div class="stat-content">
+                     <h3 class="stat-number">1+</h3>
+                     <p class="stat-label">Year Experience</p>
+                  </div>
                </div>
                
-               <!-- Decorative element -->
-               <div class="profile-card__accent"></div>
+               <div class="stat-item">
+                  <div class="stat-icon">
+                     <i class="ri-star-smile-line"></i>
+                  </div>
+                  <div class="stat-content">
+                     <h3 class="stat-number">100%</h3>
+                     <p class="stat-label">Satisfaction Rate</p>
+                  </div>
+               </div>
             </div>
          </div>
       </section>

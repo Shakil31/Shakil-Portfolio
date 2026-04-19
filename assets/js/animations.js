@@ -29,18 +29,32 @@ function initSmoothScroll() {
   }
 }
 
-// ===== HERO TEXT STAGGER ANIMATION =====
+// ===== HERO TEXT STAGGER ANIMATION (PREMIUM) =====
 function initHeroTextAnimation() {
-  const heroName = document.querySelector('[data-hero-name]');
-  const heroProfession = document.querySelector('[data-hero-profession]');
-  
-  if (!heroName || !heroProfession) return;
-
-  // Animate hero name (word by word)
-  const nameWords = heroName.querySelectorAll('*');
-  if (nameWords.length > 0) {
+  // Subtitle
+  const subtitle = document.querySelector('.home__subtitle');
+  if (subtitle) {
     gsap.fromTo(
-      nameWords,
+      subtitle,
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        ease: 'power3.out',
+        delay: 0.1,
+      }
+    );
+  }
+
+  // Headline - word by word stagger
+  const headlineWords = document.querySelectorAll('.headline-word');
+  if (headlineWords.length > 0) {
+    gsap.fromTo(
+      headlineWords,
       {
         opacity: 0,
         y: 30,
@@ -48,7 +62,7 @@ function initHeroTextAnimation() {
       {
         opacity: 1,
         y: 0,
-        duration: 0.8,
+        duration: 0.6,
         stagger: 0.15,
         ease: 'power3.out',
         delay: 0.2,
@@ -56,21 +70,44 @@ function initHeroTextAnimation() {
     );
   }
 
-  // Animate profession with text highlight
-  gsap.fromTo(
-    heroProfession,
-    {
-      opacity: 0,
-      y: 20,
-    },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      ease: 'power3.out',
-      delay: 0.6,
-    }
-  );
+  // Description
+  const description = document.querySelector('.home__description');
+  if (description) {
+    gsap.fromTo(
+      description,
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.7,
+        ease: 'power3.out',
+        delay: 0.6,
+      }
+    );
+  }
+
+  // Professional fallback for old data attributes
+  const heroProfession = document.querySelector('[data-hero-profession]');
+  if (heroProfession && !heroProfession.classList.contains('home__description')) {
+    // Legacy support for old structure
+    gsap.fromTo(
+      heroProfession,
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+        delay: 0.6,
+      }
+    );
+  }
 }
 
 // ===== PARALLAX EFFECT =====
