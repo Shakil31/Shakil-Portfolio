@@ -2,20 +2,51 @@
   "siteName": "Shakil Barua | Backend Engineer",
   "resumeUrl": "assets/pdf/Shakil_Barua_CV_IT.pdf",
   "hero": {
-    "greeting": "Hello, I'm",
+    "greeting": "BACKEND ENGINEER",
     "name": "Shakil <br> Barua",
     "split": "Creative",
-    "profession": "Backend Engineer specializing in scalable APIs and real-time systems",
+    "profession": "I design reliable Django APIs, real-time systems, and database-backed products with clean architecture and practical performance thinking.",
     "resumeLabel": "Resume",
-    "image": "assets/img/about-perfil.png"
+    "image": "assets/img/about-perfil.png",
+    "meta": [
+      {
+        "label": "Dhaka, Bangladesh",
+        "icon": "ri-map-pin-line"
+      },
+      {
+        "label": "Open to backend and full-stack roles",
+        "icon": "ri-briefcase-line"
+      },
+      {
+        "label": "Django, DRF, PostgreSQL, React",
+        "icon": "ri-stack-line"
+      }
+    ]
   },
+  "stats": [
+    {
+      "value": "5",
+      "label": "case-study projects with real backend concerns",
+      "icon": "ri-server-line"
+    },
+    {
+      "value": "60%",
+      "label": "reported load-time improvement in e-commerce work",
+      "icon": "ri-speed-up-line"
+    },
+    {
+      "value": "100+",
+      "label": "concurrent users targeted in real-time systems",
+      "icon": "ri-chat-3-line"
+    }
+  ],
   "about": {
     "title": "Building Scalable <br><span>Backend</span> Systems",
     "description": "I'm a backend engineer passionate about designing clean, maintainable architectures and building systems that scale. With experience in Django, REST APIs, and database optimization, I focus on solving complex problems through efficient code and intelligent system design.\n\nI specialize in building real-time systems, implementing secure authentication, and optimizing database performance for high-traffic applications. My approach combines strong technical fundamentals with practical problem-solving, ensuring production-ready code that performs well under pressure.\n\nCurrently working as a Backend Developer at Raktch Technology & Software, where I build scalable systems for ERP, POS, and CRM platforms. I'm driven by continuous learning and contributing to projects that make a real-world impact.",
     "buttonLabel": "Download CV",
     "image": "assets/img/about-perfil.png"
   },
-  "projectsTitle": "I Make Incredible <br><span>Projects</span>",
+  "projectsTitle": "Selected <br><span>Engineering Work</span>",
   "projects": [
     {
       "category": "Research / Full Stack",
@@ -58,18 +89,18 @@
       "url": "https://github.com/Shakil31/Billing-System-Task"
     }
   ],
-  "workTitle": "<span>My Work</span><br>Experience",
+  "workTitle": "<span>Experience</span><br>& Education",
   "experience": [
     {
       "title": "Backend Developer",
       "place": "Raktch Technology & Software, Dhaka",
-      "year": "Nov 2025 – Present",
+      "year": "Nov 2025 - Present",
       "description": "Developing scalable backend systems using Python and Django, focusing on performance, security, and clean architecture.\n\nDesigned and implemented RESTful APIs using Django REST Framework to support frontend applications. Optimized database queries and improved system performance through caching and efficient data handling.\n\nWorked on real-world applications, ensuring reliability, maintainability, and scalability of backend services."
     },
     {
       "title": "Web Developer Intern",
       "place": "Unico IT LTD, Dhaka",
-      "year": "Apr 2023 – Sep 2023",
+      "year": "Apr 2023 - Sep 2023",
       "description": "Worked as a web developer intern, contributing to the development of web applications using Laravel.\n\nCollaborated with frontend developers to build responsive and user-friendly interfaces. Developed backend features and improved application performance through efficient coding practices."
     }
   ],
@@ -77,11 +108,11 @@
     {
       "title": "B.Sc in Computer Science <br> & Engineering",
       "place": "American International University - Bangladesh (AIUB)",
-      "year": "2019 – 2023",
-      "description": "<B>CGPA: 3.43</B>\n<br>\nCompleted a Bachelor’s degree in Computer Science and Engineering with a strong focus on software development, backend systems, and database management.\n\nGained hands-on experience in web development, REST API design, and system architecture. Completed a thesis on blockchain-based healthcare systems, focusing on secure and scalable data management."
+      "year": "2019 - 2023",
+      "description": "<b>CGPA: 3.43</b><br>Completed a Bachelor's degree in Computer Science and Engineering with a strong focus on software development, backend systems, and database management.\n\nGained hands-on experience in web development, REST API design, and system architecture. Completed a thesis on blockchain-based healthcare systems, focusing on secure and scalable data management."
     }
   ],
-  "skillsTitle": "Technical <span>Skills</span>",
+  "skillsTitle": "Technical <span>Stack</span>",
   "skills": [
     {
       "category": "Backend",
@@ -108,7 +139,7 @@
       "progress": "90%"
     }
   ],
-  "certificationsTitle": "Certifications & <span>Achievements</span>",
+  "certificationsTitle": "Proof of <span>Learning</span>",
   "certifications": [
     {
       "title": "Full Stack Web Development",
@@ -123,7 +154,7 @@
       "description": "Mastered designing and implementing scalable RESTful APIs"
     }
   ],
-  "servicesTitle": "What I <span>Offer</span>",
+  "servicesTitle": "Backend <span>Services</span>",
   "services": [
     {
       "title": "Backend Development",
@@ -138,7 +169,7 @@
       "skills": "Django, React.js, JavaScript, HTML, CSS, API Integration, Axios."
     }
   ],
-  "testimonialsTitle": "<span>What They Say</span><br>About Me",
+  "testimonialsTitle": "<span>References</span><br>& Feedback",
   "testimonials": [
     {
       "name": "Rakibul Islam",
@@ -154,8 +185,8 @@
     }
   ],
   "contact": {
-    "title": "Contact Me",
-    "description": "Let’s build something impactful together. I’m open to backend, full-stack, and software engineering opportunities.",
+    "title": "Let's Talk",
+    "description": "I'm open to backend, full-stack, and software engineering opportunities where reliability, clean APIs, and practical delivery matter.",
     "copyButtonLabel": "Copy email",
     "email": "shakilbarua.aiub@gmail.com",
     "location": "Dhaka, Bangladesh"

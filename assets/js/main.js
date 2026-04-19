@@ -10,6 +10,7 @@ const iconMap = {
   default: "ri-links-line",
 };
 
+const statIcons = ["ri-server-line", "ri-database-2-line", "ri-speed-up-line", "ri-shield-check-line"];
 let portfolioData = null;
 
 const $ = (selector) => document.querySelector(selector);
@@ -77,7 +78,9 @@ function renderPortfolio(data) {
   renderHeadline(data.hero.name);
   setText("[data-hero-split]", data.hero.split);
   setHTML("[data-hero-profession]", data.hero.profession);
+  renderHeroMeta(data.hero.meta);
   setImage("[data-hero-image]", data.hero.image, `${data.siteName} portrait`);
+  renderStats(data.stats);
 
   const resumeLinks = $$("[data-resume-link], [data-about-resume]");
   resumeLinks.forEach((link) => {
@@ -210,6 +213,35 @@ function renderWork(type, items = []) {
           <h3>${item.title}</h3>
           <p class="work-card__place">${item.place}</p>
           <p>${item.description}</p>
+        </article>`
+    )
+    .join("");
+}
+
+function renderHeroMeta(items = []) {
+  const container = $("[data-hero-meta]");
+  if (!container || !items?.length) return;
+
+  container.innerHTML = asArray(items)
+    .map((item) => `<span><i class="${item.icon || "ri-checkbox-circle-line"}"></i> ${item.label}</span>`)
+    .join("");
+}
+
+function renderStats(items = []) {
+  const container = $("[data-stats-list]");
+  if (!container) return;
+
+  container.innerHTML = asArray(items)
+    .map(
+      (item, index) => `
+        <article class="stat-item">
+          <div class="stat-icon">
+            <i class="${item.icon || statIcons[index % statIcons.length]}"></i>
+          </div>
+          <div class="stat-content">
+            <h3 class="stat-number">${item.value}</h3>
+            <p class="stat-label">${item.label}</p>
+          </div>
         </article>`
     )
     .join("");
