@@ -1690,7 +1690,7 @@ img {
 }
 
 .home__stats {
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
   max-width: none;
 }
@@ -1698,13 +1698,24 @@ img {
 .stat-item {
   width: 100%;
   justify-content: flex-start;
+  align-items: center;
   padding: 1rem;
   border: 1px solid var(--line-color);
   background-color: hsla(230, 16%, 12%, .72);
 }
 
+.stat-content {
+  min-width: 0;
+}
+
 .stat-number {
   color: var(--first-color);
+  white-space: nowrap;
+}
+
+.stat-label {
+  max-width: none;
+  white-space: nowrap;
 }
 
 .projects__grid {
@@ -1760,6 +1771,14 @@ img {
     max-width: 34rem;
     width: 100%;
     margin-inline: auto;
+  }
+
+  .home__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-label {
+    white-space: normal;
   }
 }
 

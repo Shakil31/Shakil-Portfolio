@@ -25,18 +25,18 @@
   },
   "stats": [
     {
-      "value": "5",
-      "label": "case-study projects with real backend concerns",
+      "value": "19",
+      "label": "GitHub repositories",
       "icon": "ri-server-line"
     },
     {
-      "value": "60%",
-      "label": "reported load-time improvement in e-commerce work",
-      "icon": "ri-speed-up-line"
+      "value": "14",
+      "label": "backend/full-stack repos",
+      "icon": "ri-stack-line"
     },
     {
       "value": "100+",
-      "label": "concurrent users targeted in real-time systems",
+      "label": "realtime user target",
       "icon": "ri-chat-3-line"
     }
   ],

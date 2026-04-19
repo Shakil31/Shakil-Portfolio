@@ -1,8 +1,8 @@
 {
-  "siteName": "Shakil Barua | Backend Engineer",
+  "siteName": "Shakil Barua ",
   "resumeUrl": "assets/pdf/Shakil_Barua_CV_IT.pdf",
   "hero": {
-    "greeting": "BACKEND ENGINEER",
+    "greeting": "BACKEND ENGINEER <br> Hi, I am",
     "name": "Shakil <br> Barua",
     "split": "Creative",
     "profession": "I design reliable Django APIs, real-time systems, and database-backed products with clean architecture and practical performance thinking.",
