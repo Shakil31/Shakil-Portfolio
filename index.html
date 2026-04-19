@@ -46,16 +46,46 @@
                </div>
                <ul class="home__social" data-social-links></ul>
             </div>
-            <div class="home__image-wrap">
-               <img src="assets/img/home-perfil.png" alt="Portfolio profile" class="home__image" data-hero-image>
+            <div class="home__image-wrap profile-card">
+               <!-- Background blob shape -->
+               <div class="profile-card__bg-blob"></div>
+               
+               <!-- Profile image -->
+               <div class="profile-card__image-container">
+                  <img src="assets/img/home-perfil.png" alt="Portfolio profile" class="home__image" data-hero-image>
+               </div>
+               
+               <!-- Floating badge -->
+               <div class="profile-card__badge">
+                  <span>1+ Year</span>
+                  <span>Experience</span>
+               </div>
+               
+               <!-- Decorative element -->
+               <div class="profile-card__accent"></div>
             </div>
          </div>
       </section>
 
       <section class="about section" id="about">
          <div class="about__container container grid">
-            <div class="about__image-wrap">
-               <img src="assets/img/about-perfil.png" alt="About profile" class="about__image" data-about-image>
+            <div class="about__image-wrap profile-card">
+               <!-- Background blob shape -->
+               <div class="profile-card__bg-blob"></div>
+               
+               <!-- Profile image -->
+               <div class="profile-card__image-container">
+                  <img src="assets/img/about-perfil.png" alt="About profile" class="about__image" data-about-image>
+               </div>
+               
+               <!-- Floating badge -->
+               <div class="profile-card__badge">
+                  <span>Backend</span>
+                  <span>Engineer</span>
+               </div>
+               
+               <!-- Decorative element -->
+               <div class="profile-card__accent"></div>
             </div>
             <div>
                <h2 class="section__title" data-about-title></h2>
@@ -149,6 +179,14 @@
       </div>
    </footer>
 
+   <!-- Premium Animation Libraries -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
+   <script src="https://unpkg.com/@studio-freight/lenis@1.1.9/dist/lenis.min.js"></script>
+
+   <!-- Main Scripts -->
    <script src="assets/js/main.js"></script>
+   <script src="assets/js/animations.js"></script>
 </body>
 </html>
