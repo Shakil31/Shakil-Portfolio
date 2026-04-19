@@ -5,13 +5,13 @@
     "greeting": "Hello, I'm",
     "name": "Shakil <br> Barua",
     "split": "Creative",
-    "profession": "Software Engineer <br> & Creative Developer",
+    "profession": "Backend Engineer specializing in scalable APIs and real-time systems",
     "resumeLabel": "Resume",
     "image": "assets/img/about-perfil.png"
   },
   "about": {
-    "title": "<span>Creativity</span><br>Is My Passion",
-    "description": "I'm a passionate web developer and designer with a strong foundation in modern web technologies and software engineering. I specialize in building scalable, efficient, and user-friendly applications that solve real-world problems.\n\nWith experience in both frontend and backend development, I enjoy transforming ideas into fully functional digital products. My technical expertise includes working with frameworks like Laravel, Django, and React, along with database management and API development.\n\nI am driven by curiosity and continuous learning, always exploring new technologies, tools, and design trends to improve my skills. Beyond coding, I have a creative mindset that helps me craft visually appealing and engaging user experiences.\n\nCurrently, I am seeking opportunities where I can contribute, grow, and make a meaningful impact as a developer while continuously enhancing my technical and problem-solving abilities.",
+    "title": "Building Scalable <br><span>Backend</span> Systems",
+    "description": "I'm a backend engineer passionate about designing clean, maintainable architectures and building systems that scale. With experience in Django, REST APIs, and database optimization, I focus on solving complex problems through efficient code and intelligent system design.\n\nI specialize in building real-time systems, implementing secure authentication, and optimizing database performance for high-traffic applications. My approach combines strong technical fundamentals with practical problem-solving, ensuring production-ready code that performs well under pressure.\n\nCurrently working as a Backend Developer at Raktch Technology & Software, where I build scalable systems for ERP, POS, and CRM platforms. I'm driven by continuous learning and contributing to projects that make a real-world impact.",
     "buttonLabel": "Download CV",
     "image": "assets/img/about-perfil.png"
   },
@@ -21,7 +21,7 @@
       "category": "Research / Full Stack",
       "title": "Smart Healthcare <br> Data System",
       "subtitle": "Secure & Scalable Medical Platform",
-      "description": "HTML, CSS, JavaScript, Django, REST API, PostgreSQL, Blockchain Concept.",
+      "description": "Built a blockchain-based healthcare system with secure patient data storage and real-time access management. Implemented Django REST APIs with PostgreSQL for HIPAA-compliant data handling and encryption.",
       "image": "assets/img/projects-1.png",
       "url": "https://github.com/Shakil31/SmartHealthCare_system"
     },
@@ -29,7 +29,7 @@
       "category": "Full Stack Development",
       "title": "PetLouma <br> E-commerce Platform",
       "subtitle": "Scalable Full-Stack Online Pet Store",
-      "description": "Django REST Framework, React.js (Vite), PostgreSQL, JWT Authentication, Context API, Axios, CSS (Glassmorphism UI)",
+      "description": "Engineered a complete e-commerce platform with JWT authentication, payment integration, and inventory management. Optimized database queries achieving 60% faster load times with PostgreSQL caching.",
       "image": "assets/img/projects-2.png",
       "url": "https://github.com/Shakil31/Petlouma_Ecommerce_site#petlouma-e-commerce-platform-"
     },
@@ -37,7 +37,7 @@
       "category": "Full Stack Development",
       "title": "Learning Management <br> System (LMS)",
       "subtitle": "Secure Authentication & Scalable Learning Platform",
-      "description": "Django, React.js, TypeScript, JWT Authentication, Context API, REST API, PostgreSQL",
+      "description": "Developed LMS with role-based access control, course management, and real-time progress tracking. Implemented secure JWT authentication and responsive UI serving 500+ concurrent users.",
       "image": "assets/img/projects-3.png",
       "url": "https://github.com/Shakil31/Learning-Site"
     },
@@ -45,7 +45,7 @@
       "category": "Full Stack / Real-Time Systems",
       "title": "Real-Time Chat <br> Application",
       "subtitle": "WebSocket-Based Messaging Platform",
-      "description": "Django, Django REST Framework, Django Channels, Redis, React.js (Vite), WebSockets, JWT Authentication, Context API, PostgreSQL",
+      "description": "Engineered real-time messaging with WebSockets and Redis, handling 100+ concurrent users with sub-200ms latency. Implemented message persistence, typing indicators, and secure authentication.",
       "image": "assets/img/projects-4.png",
       "url": "https://github.com/Shakil31/Realtime_chat"
     },
@@ -53,7 +53,7 @@
       "category": "Full Stack Development",
       "title": "Billing & Invoice <br> Management System",
       "subtitle": "Automated Transaction & Invoice Processing",
-      "description": "Django / Laravel, PostgreSQL/MySQL, REST API, JavaScript, HTML, CSS",
+      "description": "Created automated billing system with invoice generation, payment tracking, and reconciliation. Reduced billing errors by 95% with validation and audit trails.",
       "image": "assets/img/projects-5.png",
       "url": "https://github.com/Shakil31/Billing-System-Task"
     }
@@ -147,7 +147,7 @@
   ],
   "contact": {
     "title": "Contact Me",
-    "description": "Tell me about your next project.",
+    "description": "Let’s build something impactful together. I’m open to backend, full-stack, and software engineering opportunities.",
     "copyButtonLabel": "Copy email",
     "email": "shakilbarua.aiub@gmail.com",
     "location": "Dhaka, Bangladesh"

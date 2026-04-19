@@ -33,6 +33,38 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ===== ANIMATIONS ===== */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(164, 220, 200, 0.1), 
+                0 0 40px rgba(164, 220, 200, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(164, 220, 200, 0.15),
+                0 0 50px rgba(164, 220, 200, 0.08);
+  }
+}
+
+@keyframes scroll-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 body,
 button {
   font-family: var(--body-font);
@@ -89,6 +121,12 @@ img {
 
 .section {
   padding-block: 5rem 1rem;
+}
+
+.scroll-reveal {
+  animation: scroll-reveal 0.6s ease-out;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section__title {
@@ -318,6 +356,26 @@ img {
   border-radius: 8px;
   background: linear-gradient(145deg, hsla(164, 74%, 48%, .2), hsla(26, 92%, 61%, .16));
   overflow: hidden;
+  position: relative;
+  animation: glow-pulse 3s ease-in-out infinite;
+  backdrop-filter: blur(10px);
+}
+
+.home__image-wrap::before,
+.about__image-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 8px;
+  background: linear-gradient(145deg, rgba(164, 220, 200, 0.1), rgba(26, 188, 156, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.home__image-wrap:hover::before,
+.about__image-wrap:hover::before {
+  opacity: 1;
 }
 
 .home__image,
@@ -325,12 +383,39 @@ img {
   width: 100%;
   max-height: 560px;
   object-fit: cover;
+  animation: floating 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.home__image-wrap:hover .home__image,
+.about__image-wrap:hover .about__image {
+  transform: scale(1.03);
+}
+
+/* ===== IMAGE TRANSITION ===== */
+.home__image {
+  transition: opacity 0.6s ease, transform 0.3s ease;
+}
+
+.home__image.fade-out {
+  opacity: 0.2;
 }
 
 @media screen and (max-width: 420px) {
   :root {
     --biggest-font-size: 2rem;
     --h2-font-size: 1.08rem;
+  }
+
+  /* Disable heavy animations on mobile for better performance */
+  .home__image,
+  .about__image {
+    animation: none;
+  }
+
+  .home__image-wrap,
+  .about__image-wrap {
+    animation: none;
   }
 
   .container {
@@ -376,6 +461,10 @@ img {
   border: 1px solid var(--line-color);
   border-radius: 8px;
   background-color: hsla(230, 16%, 12%, .86);
+  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, 
+    hsla(230, 16%, 12%, 0.75),
+    hsla(230, 16%, 12%, 0.6));
 }
 
 .project-card {

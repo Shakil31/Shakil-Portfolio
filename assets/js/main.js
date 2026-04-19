@@ -252,12 +252,66 @@ function bindStaticInteractions() {
   });
 }
 
+// ===== IMAGE FADE TRANSITION =====
+function initImageFadeTransition() {
+  const heroImage = $('[data-hero-image]');
+  const aboutSection = $('#about');
+  
+  if (!heroImage || !aboutSection) return;
+
+  const observerOptions = {
+    threshold: [0, 0.3, 0.6],
+  };
+
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.target === aboutSection) {
+        // Calculate fade based on intersection ratio
+        const scrollProgress = 1 - entry.intersectionRatio;
+        heroImage.style.opacity = Math.max(0.2, 1 - scrollProgress * 1.5);
+      }
+    });
+  }, observerOptions);
+
+  imageObserver.observe(aboutSection);
+}
+
+// ===== SCROLL REVEAL ANIMATION =====
+function initScrollReveal() {
+  // Only enable on screens wider than 768px
+  if (window.innerWidth < 768) return;
+
+  const revealElements = $$('[data-projects-list] .project-card, [data-work-list] article, [data-skills-list] .skill-card, [data-certifications-list] .certification-card');
+  
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('scroll-reveal');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -30px 0px'
+  });
+
+  revealElements.forEach(el => {
+    revealObserver.observe(el);
+  });
+}
+
 async function init() {
   bindStaticInteractions();
 
   try {
     const data = await loadPortfolioData();
     renderPortfolio(data);
+    
+    // Initialize animations after render
+    setTimeout(() => {
+      initImageFadeTransition();
+      initScrollReveal();
+    }, 100);
   } catch (error) {
     console.error(error);
     document.body.insertAdjacentHTML(
