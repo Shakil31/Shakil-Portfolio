@@ -393,7 +393,8 @@ async function init() {
 }
 
 async function loadPortfolioData() {
-  const sources = ["/assets/data/portfolio.json", "/api/portfolio"];
+  const version = Date.now();
+  const sources = [`/api/portfolio?v=${version}`, `/assets/data/portfolio.json?v=${version}`];
 
   for (const source of sources) {
     try {
