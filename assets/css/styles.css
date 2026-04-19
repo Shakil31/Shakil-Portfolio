@@ -677,6 +677,10 @@ img {
 .about__container,
 .contact__container {
   align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  min-height: 500px;
 }
 
 .button {
@@ -781,7 +785,6 @@ img {
   position: absolute;
   width: 75%;
   aspect-ratio: 3/4;
-  display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
