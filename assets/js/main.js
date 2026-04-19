@@ -32,6 +32,25 @@ function setImage(selector, src, alt) {
   element.alt = alt || "";
 }
 
+function asArray(value) {
+  return Array.isArray(value) ? value : [];
+}
+
+function plainText(value = "") {
+  return String(value).replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+}
+
+function renderHeadline(value = "") {
+  const headline = $("[data-hero-headline]");
+  if (!headline) {
+    setHTML("[data-hero-name]", value);
+    return;
+  }
+
+  const words = plainText(value).split(" ").filter(Boolean);
+  headline.innerHTML = words.map((word) => `<span class="headline-word">${word}</span>`).join("");
+}
+
 function socialIcon(label = "") {
   const key = label.toLowerCase().replace(/\s+/g, "");
   return iconMap[key] || iconMap.default;
@@ -55,7 +74,7 @@ function renderPortfolio(data) {
 
   setText("[data-site-name]", data.siteName);
   setText("[data-hero-greeting]", data.hero.greeting);
-  setHTML("[data-hero-name]", data.hero.name);
+  renderHeadline(data.hero.name);
   setText("[data-hero-split]", data.hero.split);
   setHTML("[data-hero-profession]", data.hero.profession);
   setImage("[data-hero-image]", data.hero.image, `${data.siteName} portrait`);
@@ -74,7 +93,7 @@ function renderPortfolio(data) {
 
   setHTML("[data-projects-title]", data.projectsTitle);
   const projectsList = $("[data-projects-list]");
-  projectsList.innerHTML = data.projects
+  projectsList.innerHTML = asArray(data.projects)
     .map(
       (project, index) => `
         <article class="project-card">
@@ -99,19 +118,25 @@ function renderPortfolio(data) {
 
   setHTML("[data-skills-title]", data.skillsTitle);
   const skillsList = $("[data-skills-list]");
-  skillsList.innerHTML = data.skills
+  if (skillsList) skillsList.innerHTML = asArray(data.skills)
     .map(
-      (skill) => `
-        <article class="skill-card">
-          <h3>${skill.category}</h3>
-          <p>${skill.items}</p>
+      (skill, index) => `
+        <article class="skill-card" style="animation-delay: ${index * 0.1}s">
+          <div class="skill-card__header">
+            <h3>${skill.category}</h3>
+            <span class="skill-card__level">${skill.level || "Focused"}</span>
+          </div>
+          <div class="skill-card__bar" aria-hidden="true">
+            <div class="skill-card__progress" style="--progress: ${skill.progress || "90%"}"></div>
+          </div>
+          <p class="skill-card__items">${skill.items}</p>
         </article>`
     )
     .join("");
 
   setHTML("[data-certifications-title]", data.certificationsTitle);
   const certificationsList = $("[data-certifications-list]");
-  certificationsList.innerHTML = data.certifications
+  if (certificationsList) certificationsList.innerHTML = asArray(data.certifications)
     .map(
       (cert) => `
         <article class="certification-card">
@@ -125,7 +150,7 @@ function renderPortfolio(data) {
 
   setHTML("[data-services-title]", data.servicesTitle);
   const servicesList = $("[data-services-list]");
-  servicesList.innerHTML = data.services
+  servicesList.innerHTML = asArray(data.services)
     .map(
       (service) => `
         <article class="service-card">
@@ -144,7 +169,7 @@ function renderPortfolio(data) {
 
   setHTML("[data-testimonials-title]", data.testimonialsTitle);
   const testimonialsList = $("[data-testimonials-list]");
-  testimonialsList.innerHTML = data.testimonials
+  testimonialsList.innerHTML = asArray(data.testimonials)
     .map(
       (testimonial) => `
         <article class="testimonial-card">
@@ -176,7 +201,8 @@ function renderPortfolio(data) {
 
 function renderWork(type, items = []) {
   const list = $(`[data-work-list="${type}"]`);
-  list.innerHTML = items
+  if (!list) return;
+  list.innerHTML = asArray(items)
     .map(
       (item) => `
         <article class="work-card">
@@ -202,6 +228,8 @@ function bindDynamicInteractions() {
 function bindStaticInteractions() {
   const navToggle = $("#nav-toggle");
   const navMenu = $("#nav-menu");
+  const scrollProgress = $(".scroll-progress");
+  const backToTop = $("#back-to-top");
   const closeMenu = () => {
     navMenu.classList.remove("show-menu");
     navToggle.setAttribute("aria-expanded", "false");
@@ -248,8 +276,19 @@ function bindStaticInteractions() {
   });
 
   window.addEventListener("scroll", () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+
     $("#header").classList.toggle("scroll-header", window.scrollY > 40);
+    if (scrollProgress) scrollProgress.style.width = `${progress}%`;
+    if (backToTop) backToTop.classList.toggle("show-back-to-top", window.scrollY > 500);
   });
+
+  if (backToTop) {
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 }
 
 // ===== IMAGE FADE TRANSITION =====
@@ -322,7 +361,7 @@ async function init() {
 }
 
 async function loadPortfolioData() {
-  const sources = ["/api/portfolio", "/assets/data/portfolio.json"];
+  const sources = ["/assets/data/portfolio.json", "/api/portfolio"];
 
   for (const source of sources) {
     try {

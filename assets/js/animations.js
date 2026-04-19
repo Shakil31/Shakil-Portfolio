@@ -1,8 +1,13 @@
 // ===== PREMIUM PORTFOLIO ANIMATIONS =====
 // Using GSAP, ScrollTrigger, and Lenis for award-level animations
 
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || typeof gsap === 'undefined') {
+  console.info('Advanced animations skipped.');
+} else {
 // Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
+if (typeof ScrollTrigger !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 // ===== SMOOTH SCROLL (Lenis) =====
 function initSmoothScroll() {
@@ -116,9 +121,8 @@ function initParallaxEffects() {
   const heroImageWrap = document.querySelector('.home__image-wrap');
   const heroImage = document.querySelector('[data-hero-image]');
   
-  if (heroImageWrap) {
+  if (heroImageWrap && heroImage && typeof ScrollTrigger !== 'undefined') {
     gsap.to(heroImage, {
-      y: (i, target) => -ScrollTrigger.getScrollerProxy().getVelocity() * 0.5,
       scrollTrigger: {
         trigger: heroImageWrap,
         scrub: 1,
@@ -433,16 +437,8 @@ function initBackgroundMotion() {
 
 // ===== SCROLL PROGRESS INDICATOR =====
 function initScrollProgress() {
-  const scrollProgress = document.createElement('div');
-  scrollProgress.style.position = 'fixed';
-  scrollProgress.style.top = '0';
-  scrollProgress.style.left = '0';
-  scrollProgress.style.height = '3px';
-  scrollProgress.style.background = 'linear-gradient(90deg, #a4dcc8, #22c55e)';
-  scrollProgress.style.width = '0%';
-  scrollProgress.style.zIndex = '1000';
-  scrollProgress.style.transition = 'width 0.1s ease';
-  document.body.appendChild(scrollProgress);
+  const scrollProgress = document.querySelector('.scroll-progress');
+  if (!scrollProgress) return;
 
   window.addEventListener('scroll', () => {
     const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
@@ -486,4 +482,5 @@ if (originalInit) {
   };
 } else {
   initAllAnimations();
+}
 }

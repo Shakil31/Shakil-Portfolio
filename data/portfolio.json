@@ -85,19 +85,27 @@
   "skills": [
     {
       "category": "Backend",
-      "items": "Python, Django, Django REST Framework, MySQL, PostgreSQL, Redis, API Development"
+      "items": "Python, Django, Django REST Framework, MySQL, PostgreSQL, Redis, API Development",
+      "level": "Advanced",
+      "progress": "92%"
     },
     {
       "category": "Frontend",
-      "items": "React.js, JavaScript, HTML5, CSS3, Vite, Context API, Axios"
+      "items": "React.js, JavaScript, HTML5, CSS3, Vite, Context API, Axios",
+      "level": "Strong",
+      "progress": "84%"
     },
     {
       "category": "Tools & Platforms",
-      "items": "Git, Postman, Linux, Docker, Vercel, GitHub"
+      "items": "Git, Postman, Linux, Docker, Vercel, GitHub",
+      "level": "Strong",
+      "progress": "86%"
     },
     {
       "category": "Databases",
-      "items": "PostgreSQL, MySQL, Database Design, Query Optimization"
+      "items": "PostgreSQL, MySQL, Database Design, Query Optimization",
+      "level": "Advanced",
+      "progress": "90%"
     }
   ],
   "certificationsTitle": "Certifications & <span>Achievements</span>",

@@ -30,7 +30,7 @@ const repeaters = {
   projects: ["category", "title", "subtitle", "description", "image", "url"],
   experience: ["title", "place", "year", "description"],
   education: ["title", "place", "year", "description"],
-  skills: ["category", "items"],
+  skills: ["category", "items", "level", "progress"],
   certifications: ["title", "issuer", "year", "description"],
   services: ["title", "description", "subtitle", "skills"],
   testimonials: ["name", "rating", "quote", "image"],
@@ -62,6 +62,8 @@ const templates = {
   skills: {
     category: "Backend",
     items: "Python, Django, Django REST Framework",
+    level: "Strong",
+    progress: "85%",
   },
   certifications: {
     title: "Certification Name",
